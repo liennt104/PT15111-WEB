@@ -33,6 +33,12 @@ Route::resource('students', StudentController::class)
 Route::get('subjects', [SubjectController::class, 'index'])
     ->name('subjects.index');
 
+Route::get('/post', function () {
+    $post = \App\Models\Post::find(2);
+    $comment = \App\Models\Comment::find(1);
+    dd($comment->post);
+});
+
 // Route::get('/students', function () {
 //     // Su dung query builder
 //     // Lay ra mang students
