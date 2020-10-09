@@ -49,6 +49,8 @@
                   </td>
               </tr>
           @endforeach
+          <!-- Them 1 dong de hien thi nut phan trang -->
+          <tr><td colspan="7">{{$students->links()}}</td></tr>
       </tbody>
   </table>
 @endsection

@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('content');
             $table->string('image_url')->nullable();
             $table->boolean('status')->default(false);
+            $table->unsignedInteger('student_id');
             $table->timestamps();
         });
     }
