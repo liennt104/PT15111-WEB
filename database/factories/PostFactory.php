@@ -26,6 +26,7 @@ class PostFactory extends Factory
             'desc' => $this->faker->text(10),
             'content' => $this->faker->text(200),
             'image_url' => $this->faker->imageUrl,
+            'student_id' => $this->faker->numberBetween(1, 10),
             'status' => 1,
         ];
     }
