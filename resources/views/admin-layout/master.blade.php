@@ -169,7 +169,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
+          <!-- <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -191,13 +191,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
             </ul>
+          </li> -->
+          <li class="nav-item">
+            <a href="/students" class="nav-link {{ request()->is('students*') ? 'active' : '' }}">
+              <p>
+                Student
+              </p>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="/posts" class="nav-link {{ request()->is('posts*') ? 'active' : '' }}">
               <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
+                Post
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/categories" class="nav-link {{ request()->is('categories*') ? 'active' : '' }}">
+              <p>
+                Category
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/comments" class="nav-link {{ request()->is('comments*') ? 'active' : '' }}">
+              <p>
+                Comments
               </p>
             </a>
           </li>

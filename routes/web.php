@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CategoryController;
 
 // use DB;
 /*
@@ -29,15 +32,20 @@ Route::resource('students', StudentController::class)
     // ->only(['index']); khi chi dung ham nao do
     // ->except(['create', 'edit']); khi can bo qua ham nao do
 ;
+
+Route::resource('posts', PostController::class);
+Route::resource('categories', CategoryController::class);
+Route::resource('comments', CommentController::class);
+
 // Tao route cho subject controller khong dung resource
 Route::get('subjects', [SubjectController::class, 'index'])
     ->name('subjects.index');
 
-Route::get('/post', function () {
-    $post = \App\Models\Post::find(2);
-    $comment = \App\Models\Comment::find(1);
-    dd($comment->post);
-});
+// Route::get('/post', function () {
+//     $post = \App\Models\Post::find(2);
+//     $comment = \App\Models\Comment::find(1);
+//     dd($comment->post);
+// });
 
 // Route::get('/students', function () {
 //     // Su dung query builder
