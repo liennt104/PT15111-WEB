@@ -30,7 +30,7 @@
         <tr>
             <td>{{ $post->desc }}</td>
             <td>{{ $post->content }}</td>
-            <td><img src="{{ $post->image_url }}" height="50" /> </td>
+            <td><img src="{{ substr($post->image_url, 0, 4) == 'http' ? $post->image_url : asset($post->image_url) }}" height="50" /> </td>
             <td>{{ $post->student->name }}</td>
             <td>{{ $post->status == 1 ? 'Published' : 'Unpublish' }}</td>
             <td>
