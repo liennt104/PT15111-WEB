@@ -9,6 +9,7 @@ use App\Models\Post;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\CategoryPost;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,12 +20,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Student::factory(10)->create();
-        Subject::factory(20)->create();
-        Post::factory(10)->create();
-        Comment::factory(10)->create();
-        Category::factory(10)->create();
-        CategoryPost::factory(10)->create();
+        User::factory(3)->create();
+        // Student::factory(10)->create();
+        // Subject::factory(20)->create();
+        // Post::factory(10)->create();
+        // Comment::factory(10)->create();
+        // Category::factory(10)->create();
+        // CategoryPost::factory(10)->create();
         // $this->call([
         //     StudentsTableSeeder::class,
         //     SubjectsTableSeeder::class,
