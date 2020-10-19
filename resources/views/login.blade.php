@@ -11,7 +11,7 @@
 
     <form method="POST" action="{{ route('post-login') }}">
         @csrf
-        <input name="username" placeholder="Username" type="text" />
+        <input name="email" placeholder="Email" type="email" />
         <input name="password" placeholder="Password" type="password" />
         <button type="submit">Submit</button>
     </form>
