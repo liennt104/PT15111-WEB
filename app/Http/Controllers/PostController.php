@@ -24,7 +24,9 @@ class PostController extends Controller
     {
         // dd(Post::where('id', 21)->get('image_url'));
 
-        $posts = Post::paginate(5); // lay ra ds co phan trang (5 phan tu/1trang)
+        // $posts = Post::paginate(5); // lay ra ds co phan trang (5 phan tu/1trang)
+        $posts = Post::with('student')->paginate(5); // lay ra ds co phan trang (5 phan tu/1trang)
+        // dd($posts);
         // Them param page="gia tri page"
         return view('posts.list', ['posts' => $posts]);
     }

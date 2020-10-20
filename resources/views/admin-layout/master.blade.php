@@ -8,6 +8,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Gui content len bang cach tim the meta va lay ra attr content -->
+  <meta name='csrf' content={{csrf_token() }}>
 
   <title>@yield('title')</title>
 
