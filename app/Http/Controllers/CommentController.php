@@ -12,9 +12,11 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $requests)
     {
-        $comments = Comment::paginate(5); // lay ra ds co phan trang (5 phan tu/1trang)
+        // $comments = Comment::all(); // lays ra ds co phan trang (5 phan tu/1trang)
+        $comments = Comment::with(['post:id,desc', 'student:id,name'])->paginate(5);
+        // dd($comments);
         // Them param page="gia tri page"
         return view('comments.list', ['comments' => $comments]);
     }

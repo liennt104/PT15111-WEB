@@ -123,6 +123,8 @@ class StudentController extends Controller
 
         // Cach 2: Student::destroy($student->id); // tra ve so luong ban ghi bi xoa
         // Redirect ve danh sach (co thuc hien truy van lay ds moi)
-        return redirect()->route('students.index');
+        // Neu su dung ajax thi khong return redirect ve nua, hanh dong xoa chi thuc hien xoa
+        // tren view se do js thuc hien xoa element de duoc danh sach moi
+        // return redirect()->route('students.index');
     }
 }
